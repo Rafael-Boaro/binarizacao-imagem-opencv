@@ -1,0 +1,37 @@
+# Segredos e ambiente
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Ambientes virtuais Python
+.venv/
+venv/
+ENV/
+env/
+
+# Python / Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Sistema (Linux/Windows/macOS)
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+*~
+.fuse_hidden*
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+
+# Logs e temporarios
+*.log
+tmp/
