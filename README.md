@@ -85,8 +85,3 @@ VALOR_LIMIAR = 120  # Intervalo de 0 a 255
 | Equilibrada (Iluminacao ambiente comum) | Separacao clara entre sujeito e fundo | Manter valor padrao | 115 a 125 |
 | Superexposta (Excesso de luz / fundo estourado) | Perda de contornos por predominancia de pixels brancos | Aumentar o limiar | 135 a 165 |
 
-## Decisoes tecnicas
-
-1. Filtro Gaussiano antes da binarizacao: A binarizacao pura em imagens reais de cameras de celular tende a propagar ruidos pontuais de alta frequencia. A convolucao com nucleo gaussiano (5, 5) suaviza transicoes bruscas sem degradar a silhueta principal.
-2. Homogeneizacao de canais para composicao matricial: A funcao cv2.cvtColor(img, cv2.COLOR_GRAY2BGR) foi utilizada nas saidas monocromaticas para igualar o numero de dimensoes (3 canais) a imagem colorida original, permitindo o uso direto de np.hstack e np.vstack.
-3. Tratamento de ambiente grafico: O script verifica a disponibilidade de display grafico antes da chamada de cv2.imshow, garantindo que o pipeline possa ser executado tanto em estacoes desktop com interface grafica quanto em servidores ou conteineres headless sem abortar.
